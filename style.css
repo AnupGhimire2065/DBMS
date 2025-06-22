@@ -1,0 +1,97 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #fafafa;
+  color: #333;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* CONTAINER */
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+header h1 {
+  font-size: 2rem;
+  color: #222;
+}
+
+/* LISTS & ACCORDION */
+ol, ul {
+  list-style: none;
+}
+ol > li {
+  counter-increment: section;
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 35px;
+}
+ol > li::before {
+  content: counter(section) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: #555;
+}
+ul > li {
+  margin: 10px 0;
+  padding-left: 15px;
+  position: relative;
+}
+ul > li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #888;
+}
+
+/* TOGGLE BUTTONS */
+.toggle-btn {
+  cursor: pointer;
+  display: block;
+  font-weight: 600;
+  padding: 8px 0;
+  transition: color 0.2s ease;
+}
+.toggle-btn:hover {
+  color: #0066cc;
+}
+
+/* CONTENT SECTIONS */
+.content-section {
+  display: none;
+  padding: 15px;
+  margin: 5px 0 20px 20px;
+  border-left: 3px solid #0066cc;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: max-height 0.3s ease;
+}
+
+/* STRONG TAGS */
+strong {
+  color: #0066cc;
+}
+
+/* OPTIONAL: always show one open by default */
+/* .content-section:first-of-type { display: block; } */
